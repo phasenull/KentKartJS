@@ -30,7 +30,6 @@
 	},
 	"homepage": "https://github.com/phasenull/KentKartJS#readme",
 	"devDependencies": {
-		"node-fetch": "^3.3.2",
 		"vitest": "^2.0.2"
 	}
 }
