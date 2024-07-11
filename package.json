@@ -2,28 +2,34 @@
 	"name": "kentkart",
 	"version": "1.0.0",
 	"description": "unofficial KentKart API client",
-	"main": "index.js",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"/dist"
+	],
 	"scripts": {
-	  "test": "echo \"Error: no test specified\" && exit 1"
+		"test": "vitest"
 	},
 	"repository": {
-	  "type": "git",
-	  "url": "git+https://github.com/phasenull/KentKartJS.git"
+		"type": "git",
+		"url": "git+https://github.com/phasenull/KentKartJS.git"
 	},
 	"keywords": [
-	  "kentkart",
-	  "citycard",
-	  "bus",
-	  "transit",
-	  "api",
-	  "kentkartapi",
-	  "kentkartjs"
+		"kentkart",
+		"citycard",
+		"bus",
+		"transit",
+		"api",
+		"kentkartapi",
+		"kentkartjs"
 	],
 	"author": "phasenull",
 	"license": "ISC",
 	"bugs": {
-	  "url": "https://github.com/phasenull/KentKartJS/issues"
+		"url": "https://github.com/phasenull/KentKartJS/issues"
 	},
-	"homepage": "https://github.com/phasenull/KentKartJS#readme"
-  }
-  
+	"homepage": "https://github.com/phasenull/KentKartJS#readme",
+	"devDependencies": {
+		"vitest": "^2.0.2"
+	}
+}
