@@ -34,7 +34,7 @@ export default class City {
 	public readonly nfc: boolean
 	public readonly oCharge: boolean
 	constructor(initial_info?: { region_code: string }) {
-		const  region_code = initial_info?.region_code
+		const region_code = initial_info?.region_code
 		this.id = region_code
 	}
 	async fetch() {
@@ -44,13 +44,18 @@ export default class City {
 
 	async fetchRoutes() {
 		if (!this.id) throw new Error(`Tried to fetch city with invalid id (expected string, got ${this.id})`)
-		return await KentKart.City.getRouteListFromRegionCode({region:this.id})
+		return await KentKart.City.getRouteListFromRegionCode({ region: this.id })
 	}
 
+	public async realtimeGTFS() {
+		if (!this.id) throw new Error(`Tried to fetch realtime with invalid id (expected string, got ${this.id})`)
+		throw new Error("not implemented yet")
+		// return await KentKart.City.getRouteListFromRegionCode({region:this.id})
+	}
 	toJSON() {
 		return Object.fromEntries(Object.entries(this))
 	}
-	loadFrom(data: Record<keyof City, City[keyof City]>) {
+	private loadFrom(data: Record<keyof City, City[keyof City]>) {
 		Object.assign(this, data)
 		return this
 	}

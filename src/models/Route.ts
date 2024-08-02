@@ -15,7 +15,7 @@ export default class Route {
 		this.__region = region
 	}
 
-	public loadFrom(data: Record<keyof Route, Route[keyof Route]>) {
+	private loadFrom(data: Record<keyof Route, Route[keyof Route]>) {
 		Object.assign(this, data)
 		return this
 	}
